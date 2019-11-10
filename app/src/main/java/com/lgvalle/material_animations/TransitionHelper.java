@@ -17,10 +17,12 @@
 package com.lgvalle.material_animations;
 
 import android.app.Activity;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.util.Pair;
+
+import androidx.core.util.Pair;
 import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -41,7 +43,7 @@ class TransitionHelper {
      * @return All transition participants.
      */
     public static Pair<View, String>[] createSafeTransitionParticipants(@NonNull Activity activity,
-                                                          boolean includeStatusBar, @Nullable Pair... otherParticipants) {
+                                                                        boolean includeStatusBar, @Nullable Pair... otherParticipants) {
         // Avoid system UI glitches as described here:
         // https://plus.google.com/+AlexLockwood/posts/RPtwZ5nNebb
         View decor = activity.getWindow().getDecorView();

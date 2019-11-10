@@ -1,7 +1,7 @@
 package com.lgvalle.material_animations;
 
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
+
 import android.os.Bundle;
 import android.transition.Fade;
 import android.transition.TransitionManager;
@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import androidx.databinding.DataBindingUtil;
 
 import com.lgvalle.material_animations.databinding.ActivityAnimations1Binding;
 
@@ -35,7 +37,8 @@ public class AnimationsActivity1 extends BaseDetailActivity {
     }
 
     private void bindData() {
-        ActivityAnimations1Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_animations1);
+        ActivityAnimations1Binding binding =
+                DataBindingUtil.setContentView(this, R.layout.activity_animations1);
         sample = (Sample) getIntent().getExtras().getSerializable(EXTRA_SAMPLE);
         binding.setAnimationsSample(sample);
     }
